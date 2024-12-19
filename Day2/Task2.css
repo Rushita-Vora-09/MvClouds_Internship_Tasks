@@ -1,0 +1,36 @@
+body {
+    height: 700px;
+    width: auto;
+    background-image: url('news_background.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.headlines {
+    color: white;
+    font-size: 50px;
+    margin: 300px 280px;
+    width: 800px;
+}
+.headlines b {
+    color: black;
+}
+.news {
+    background-color: red;
+    color: white;
+    display: inline-flex;
+    margin: 70px 80px;
+    position: absolute;
+    left: 50px;
+    top: 652px;
+    font-size: 43px;
+}
+.content {
+    display: inline-flex;
+    border: 2px solid green;
+    font-size: 35px;
+    color: black;
+    margin: 50px 400px;
+    width: 1000px;
+    background-color: rgb(248, 230, 70);
+}

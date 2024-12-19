@@ -1,0 +1,19 @@
+body {
+    background-image: url('bg_image.jpg');
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+}
+.grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 230px;
+}
+.col {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+.col:hover {
+    opacity: 0;
+}

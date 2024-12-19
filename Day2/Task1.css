@@ -1,0 +1,49 @@
+.main{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(230, 235, 236);
+    margin-top: 100px;
+}
+.title
+{
+    display: inline-flex;
+    /* border: 2px solid red; */
+}
+.count
+{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background-color: rgb(21, 108, 184);
+    border-radius: 50% 50% 50% 0%;
+    margin: 20px 10px 20px 50px;
+    padding-top: 5px;
+    color: white;
+    font-size: 18px;
+}
+.content{
+justify-content: center;
+padding: 5px 30px;
+}
+input, textarea, select
+{
+    margin: 10px 20px;
+    width: 92%;
+    color: gray;
+    font-weight: bold;
+    padding: 5px;
+    font-family: serif;
+    background-color: rgb(219, 222, 223);
+}
+h3{
+    margin-left:20px ;
+}
+#submit{
+    height: 50px;
+    background-color: rgb(21, 108, 184);
+    color: white;
+    border: none;
+    font-size: 15px;
+    margin: 5px 25px 20px 25px;
+}

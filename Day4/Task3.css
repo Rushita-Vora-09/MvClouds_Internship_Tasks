@@ -1,0 +1,24 @@
+h2 {
+    margin-left: 50px;
+}
+#date {
+    border: 1px solid gray;
+    height: 20px;
+    width: 200px;
+    margin: 10px 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+#btn {
+    border: 2px solid rgb(69, 9, 9);
+    background-color: rgb(224, 199, 203);
+    margin-left: 70px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#content {
+    margin: 50px;
+    font-size: 20px;
+}

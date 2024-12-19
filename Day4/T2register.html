@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+<body>
+    <form action="#" id="formdata" onsubmit="return registration()">
+        <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="rname"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="rname" id="rname" required>
+
+            <label for="remail"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="remail" id="remail" required>
+
+            <label for="rpw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="rpw" id="rpw" required>
+
+            <label for="cpw"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="cpw" id="cpw" required>
+            <hr>
+
+            <input type="submit" class="button" value="Submit">
+            <div class="login">
+                <p>Already have an account? <a href="T2login.html">Login</a>.</p>
+            </div>
+
+            <!-- Show details button, initially hidden -->
+            <button id="showDetailsBtn" type="button" style="display:none" onclick="showDetails()">Show Details</button>
+        </div>
+    </form>
+    <script src="Task2.js"></script>
+
+</body>
+</html>

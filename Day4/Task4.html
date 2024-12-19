@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remaining Days</title>
+   <link rel="stylesheet" href="Task4.css">
+    
+</head>
+<body>
+    <form id="gettime" action="#">
+        <h2>Enter Break Time:</h2>
+        <p class="para">Enter Lunch Time here: </p>
+        <input type="number" name="lunch_hour" id="lhr" placeholder="Hours" > 
+        <input type="number" name="lunch_min" id="lmin" placeholder="Minutes" > 
+        <br>
+        <p class="para">Enter current Time here: </p>
+        <input type="number" name="cur_hour" id="chr" placeholder="Hours" > 
+        <input type="number" name="cur_min" id="cmin" placeholder="Minutes"> 
+        <br>
+        <input id="btn" type="button" onclick="findTime()" value="Get Time">
+    <p id="content" class="para"></p>
+</form>
+    <script type="text/javascript" src="Task4.js"></script>
+</body>
+</html> 

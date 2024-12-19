@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="Task5.css">
+</head>
+<body>
+    <div class="main">
+        <div class="middle">
+            <h1>Create Account</h1>
+            <hr>
+            <form id="formdata" action="#">
+            <table>
+                <tr>
+                    <td><label for="fname">First name*</label><br>
+                        <input class="input" type="text" id="fname" name="fname" placeholder="enter your first name" required>
+                    </td>
+                    <td><label for="lname">Last name</label><br>
+                        <input class="input" type="text" id="lname" name="lname" placeholder="enter your last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="email">Email*</label><br>
+                        <input class="input" type="email" id="email" name="email" placeholder="enter your email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="pw">Password*</label><br>
+                        <input class="input" type="password" id="pw" name="pw" placeholder="enter your password" required>
+                    </td>
+                    <td><label for="cpw">Confirm Password*</label><br>
+                        <input class="input" type="password" id="cpw" name="cpw" placeholder="enter your password again" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <Label>Gender: </Label> <br>
+                        <input type="radio" name="gender" id="male">
+                        <label class="option" for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label class="option" for="female">Female</label>
+                    </td>
+                    <td>
+                        <label> Hobbies</label><br>
+                        <input type="checkbox" id="music" value="music" name="hobby"><label class="option" for="music">Music</label>
+                        <input type="checkbox" id="sports" value="sports" name="hobby"><label class="option" for="sports">Sports</label>
+                        <input type="checkbox" id="travel" value="travel" name="hobby"><label class="option" for="travel">Travel</label>
+                        <input type="checkbox" id="movies" value="movies" name="hobby"><label class="option" for="movies">Movies</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Source of Income</label><br>
+                    <select id="input" class="input" name="source of income">
+                        <option value="select source of income" selected disabled></option>
+                        <option value="employed" selected>Employed</option>
+                        <option value="Business">Business</option>
+                        <option value="none">None</option>
+                    </select></td>
+                    <td><label for="income">Income</label><br>
+                    <input id="range" type="range" min="0" max="20" value="0"> <button>20K</button></td>
+                </tr>
+                <tr>
+                    <td><label>Upload Profile Picture</label><br>
+                        <input id="profile" type="file">
+                    </td>
+                    <td><label for="age">Age</label><br>
+                        <input class="input" type="number" value="18" name="age" id="age" ></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="bio">Bio</label><br>
+                        <textarea id="bio" name="bio" rows="5" cols="90"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+        <div id="btn_create">
+            <input type="submit" value="Submit"/>
+        </div>
+        </form>
+        </div>
+    </div>
+    <!-- <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script> -->
+    <script type="module">
+          
+    // Import the necessary Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getDatabase, ref, set ,push} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAgl9n0_V9DNUz3xb8HcMhAcWd9dlxufIw",
+        authDomain: "userdata-40273.firebaseapp.com",
+        databaseURL: "https://userdata-40273-default-rtdb.firebaseio.com",
+        projectId: "userdata-40273",
+        storageBucket: "userdata-40273.firebasestorage.app",
+        messagingSenderId: "356893141125",
+        appId: "1:356893141125:web:2c0104557b79d3131161ec",
+        measurementId: "G-V0NXGM6E1B" 
+    };
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    const form=document.getElementById('formdata')
+
+    form.addEventListener("submit",(e)=>
+    {
+        e.preventDefault();
+        const fname=document.getElementById('fname').value;
+        const lname=document.getElementById('lname').value;
+        const email=document.getElementById('email').value;
+        const pw=document.getElementById('pw').value;
+        const cpw=document.getElementById('cpw').value;
+        const income=document.getElementById('range').value;
+        const profile=document.getElementById('profile').value;
+        const age=document.getElementById('age').value;
+        const bio=document.getElementById('bio').value;
+
+        const messagesRef = ref(database, "messages");
+
+        // Push a new child to the 'messages' node
+        const newMessageRef = push(messagesRef);
+
+        // Set data to the new reference
+        set(newMessageRef, {
+        fname:fname,
+            lname:lname,
+            email:email,
+            password:pw,
+            conf_pw:cpw,
+            income:income,
+            profile:profile,
+            age:age,
+            bio:bio
+        })
+        .then(() => {
+            console.log("Data saved successfully!");
+            form.reset();
+        })
+        .catch((error) => {
+            console.error("Error saving data:", error);
+        });
+        console.log(fname,lname,email)
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    position: static;
+    background-color: red;
+    animation: circle 1s infinite alternate;
+}
+.square {
+    position: absolute;
+    background-color: rgb(4, 102, 155);
+    margin: 0px;
+    animation: square 1.5s infinite alternate;
+}
+.oval {
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+    animation: oval 2s infinite alternate;
+}
+@keyframes circle {
+    from {
+        background-color: red;
+        transform: translate(0px,0px)
+    }
+    to {
+        background-color: yellow;
+        transform: translate(0px,500px);
+    }
+}
+@keyframes square {
+    from {
+        background-color: rgb(4, 102, 155);
+        transform: translate(0px,0px);
+        height: 150px;
+        width: 150px;
+    }
+    to {
+        background-color: blueviolet;
+        transform: translate(1000px,0px);
+        height: 200px;
+        width: 200px;
+    }
+}
+@keyframes oval {
+    from {
+        background-color: green;
+        transform: translate(1000px,450px);
+        height: 100px;
+        width: 200px;
+    }
+    to {
+        background-color: aquamarine;
+        transform: translate(0px,0px);
+        height: 150px;
+        width: 300px;
+    }
+}

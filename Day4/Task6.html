@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Table Viewer</title>
+  <link rel="stylesheet" href="Task6.css">
+</head>
+<body>
+  <div class="container">
+    <div class="upload-section">
+      <h1>Image Table Viewer</h1>
+      <input type="file" id="csvFile" accept=".csv" />
+      <button class="upload-button" onclick="handleFileUpload()">Upload</button>
+    </div>
+    <table id="imageTable">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="Task6.js"></script>
+</body>
+</html>

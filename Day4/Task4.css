@@ -1,0 +1,28 @@
+#gettime {
+    margin: 30px;
+}
+h2 {
+    margin-left: 50px;
+}
+input {
+    border: 1px solid gray;
+    height: 15px;
+    width: 100px;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(235, 239, 238);
+}
+#btn {
+    border: 2px solid rgb(9, 69, 26);
+    background-color: rgb(199, 224, 206);
+    margin-left: 110px;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 50px;
+}
+#content {
+    margin: 50px;
+    font-size: 20px;
+}
