@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="Samsung.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+<body>
+
+  <div class="navv">
+    <div class="header">
+ 
+      <div class="nav">
+          <div id="logo"><a href="SamsungHome.html"> <img src="Images/Samsung Logo 1.jpg" alt="Samsang"></a></div>
+          <div class="navbar" id="navbar">
+              <ul class="navList">
+                  <li class="navIcon"><a href="#">Shop</a></li>
+                  <li class="navIcon"><a href="#">Mobile</a></li>
+                  <li class="navIcon"><a href="#">Tv & AV</a></li>
+                  <li class="navIcon"><a href="#">Appliances</a></li>
+                  <li class="navIcon"><a href="#">Computing & Displays</a></li>
+                  <li class="navIcon"><a href="#">Accessories</a></li>
+                  <li class="navIcon"><a href="#">SmartThings</a></li>
+                  <li class="navIcon"><a href="#">AI</a></li>
+              </ul>
+          </div>
+          <div class="search">
+              <a href="#"><i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text"></a>
+          </div>
+          <div class="cart">
+            <a href="#">
+              <i class='fas fa-cart-arrow-down'></i></a>
+          </div>
+          
+          <div class="user">
+            <a href="login.html">
+              <i class="fa-regular fa-user"></i></a>
+          </div>
+
+          <button class="hamburger check-btn" onclick="openSideMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+      </div>
+      <div class="side-menu" id="sideMenu">
+        <div class="search-in-side">
+          <a href="#">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text">
+        </a>
+      </div>
+      <button class="close" id="close-btn" onclick="closeSideMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="user-in-side">
+          <a href="login.html">Log-In/Sign-Up</a>
+      </div>
+        <ul class="clickable-links">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">TV & AV</a></li>
+            <li><a href="#">Appliances</a></li>
+            <li><a href="#">Computing & Displays</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">SmartThings</a></li>
+            <li><a href="#">AI</a></li>
+        </ul>
+        <ul class="disabled-links">
+          <li><a href="#">Support</a></li>
+          <li><a href="#">For Business</a></li>
+        </ul>
+        <ul class="disabled-links">
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Product Registration</a></li>
+          <li><a href="#">Digital Service Center</a></li>
+        </ul>
+    </div>
+  </div>
+  
+  </div>
+    <form action="#" id="formdata" onsubmit="return registration()">
+      <div class="container1">
+          <h1 class="heading">Register</h1>
+          <p class="title">Make the most of your professional life.</p>
+
+          <label for="remail">Email</label>
+          <input type="email" placeholder="Enter Email" name="remail" id="remail" required>
+
+          <label for="rpw">Password</label>
+          <input type="password" placeholder="Enter Password" name="rpw" id="rpw" required>
+
+          <label for="cpw">Repeat Password</label>
+          <input type="password" placeholder="Repeat Password" name="cpw" id="cpw" required>
+
+          <input type="submit" class="button" value="Submit">
+          <div class="redirect">
+              <p>Already have an account? <a href="login.html"  id="loginLink">Login</a></p>
+          </div>
+          <!-- Show Details Button -->
+          <button id="showDetailsBtn" type="button" onclick="showDetails()">Show Details</button>
+      </div>
+  </form>
+
+
+
+    <div class="footer-main">
+        <div class="footer">
+            <div class="footer-column">
+              <div class="footer-column-item">
+                  <h3 class="footer-column-header">Product & Service</h3>
+                  <a href="#" class="footer-column-item-links">Smartphones</a>
+                  <a href="#" class="footer-column-item-links">Tablets</a>
+                  <a href="#" class="footer-column-item-links">Audio Sound</a>
+                  <a href="#" class="footer-column-item-links">Watches</a>
+                  <a href="#" class="footer-column-item-links">Smart Switch</a>
+                  <a href="#" class="footer-column-item-links">Mobile Accessories</a>
+                  <a href="#" class="footer-column-item-links">TVs</a>
+                  <a href="#" class="footer-column-item-links">Sound Devices</a>
+                  <a href="#" class="footer-column-item-links">Refrigerators</a>
+                  <a href="#" class="footer-column-item-links">Laundry</a>
+                  <a href="#" class="footer-column-item-links">Air Solutions</a>
+                  <a href="#" class="footer-column-item-links">Cooking Appliances</a>
+                  <a href="#" class="footer-column-item-links">Monitors</a>
+                  <a href="#" class="footer-column-item-links">Memory Storage</a>
+              </div>
+            </div>
+    
+            <div class="footer-column">
+                  <div class="footer-column-item">
+                      <h3 class="footer-column-header">Shop</h3>
+                      <a href="#" class="footer-column-item-links">FAQs</a>
+                      <a href="#" class="footer-column-item-links">Contact Us</a>
+                      <a href="#" class="footer-column-item-links">Welcome Voucher</a>
+                      <a href="#" class="footer-column-item-links">Samsung Referral Advantage</a>
+                      <a href="#" class="footer-column-item-links">Samsung Student Advantage</a>
+                      <a href="#" class="footer-column-item-links">Defence Purchase Program</a>
+                      <a href="#" class="footer-column-item-links">Corporate Employee Program </a>
+                      <a href="#" class="footer-column-item-links">Corporate Bulk Purchase</a>
+                      <a href="#" class="footer-column-item-links">Refrigerators</a>
+                      <a href="#" class="footer-column-item-links">Store Locator</a>
+                      <a href="#" class="footer-column-item-links">Smart Club</a>
+                      <a href="#" class="footer-column-item-links">Terms of Use</a>
+                      <a href="#" class="footer-column-item-links">Order Grievance Redressal</a>
+                      <a href="#" class="footer-column-item-links">Explore</a>
+                  </div>
+                  </div>
+    
+            <div class="footer-column">
+              <div class="footer-column-item">
+                  <h3 class="footer-column-header">Support</h3>
+                  <a href="#" class="footer-column-item-links">WhatsApp Us</a>
+                  <a href="#" class="footer-column-item-links">Sign Language</a>
+                  <a href="#" class="footer-column-item-links">Email Us</a>
+                  <a href="#" class="footer-column-item-links">Call Us</a>
+                  <a href="#" class="footer-column-item-links">Email the CEO</a>
+                  <a href="#" class="footer-column-item-links">Community</a>
+                  <a href="#" class="footer-column-item-links">Product registration</a>
+                  <a href="#" class="footer-column-item-links">Track Repair</a>
+                  <a href="#" class="footer-column-item-links">Service Center</a>
+                  <a href="#" class="footer-column-item-links">Share Your opinion</a>
+                  <a href="#" class="footer-column-item-links">Chat With Us</a>
+                  <a href="#" class="footer-column-item-links">Smartphones</a>
+              </div>
+              </div>
+            <div class="footer-column">
+              <div class="footer-column-item">
+                  <h3 class="footer-column-header">Account & Community</h3>
+                  <a href="#" class="footer-column-item-links">My Page</a>
+                  <a href="#" class="footer-column-item-links">My Product</a>
+                  <a href="#" class="footer-column-item-links">Orders</a>
+                  <a href="#" class="footer-column-item-links">Whishlist</a>
+                  <a href="#" class="footer-column-item-links">Vouchers</a>
+                  <a href="#" class="footer-column-item-links">My Referrals</a>
+                  <a href="#" class="footer-column-item-links">Service</a>
+                  <a href="#" class="footer-column-item-links">Community</a>
+    
+              </div>
+              </div>
+            <div class="footer-column">
+              <div class="footer-column-item">
+                  <h3 class="footer-column-header">Sustainability</h3>
+                  <a href="#" class="footer-column-item-links">Environment</a>
+                  <a href="#" class="footer-column-item-links">Secirity & Privecy</a>
+                  <a href="#" class="footer-column-item-links">Accessibility</a>
+                  <a href="#" class="footer-column-item-links">Diversity · Equity · Inclusion</a>
+                  <a href="#" class="footer-column-item-links">Corporate Citizenship</a>
+                  <a href="#" class="footer-column-item-links">Corporate Sustainability</a>
+    
+                  <h3 class="footer-column-header">About Us</h3>
+                  <a href="#" class="footer-column-item-links">Company Info</a>
+                  <a href="#" class="footer-column-item-links">Business Area</a>
+                  <a href="#" class="footer-column-item-links">Brand Indentity</a>
+                  <a href="#" class="footer-column-item-links">Careers</a>
+                  <a href="#" class="footer-column-item-links">Investor Relations</a>
+                  <a href="#" class="footer-column-item-links">Newsroom</a>
+                  <a href="#" class="footer-column-item-links">Ethics</a>
+                  <a href="#" class="footer-column-item-links">Samsung Design</a>
+              </div>
+              </div>
+              </div>
+              <div class="footer-copy">
+                <p class="footer-copyright">Copyright ⓒ 1995-2024 SAMSUNG All Rights reserved.</p>
+    
+                <div class="footer-legal">
+                  <br>
+                  Please dispose of e-waste and plastic waste responsibly.
+                  <br>
+                  For more information or e-waste pick up, please call 1800 5 7267864 or 
+                  <a href="/in/microsite/care-for-clean-india/" data-di-id="di-id-865197b0-42c4cab9">click here</a>
+                   for more details.
+                   <br><br>
+                   Registered Office Address: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001
+                   <br>
+                   Corporate Identification Number (CIN): U31900DL1995PTC071387</div>
+              </div>
+              <div class="footer-social">
+                  <div class="foot-language">
+                    India/English
+                  </div>
+                  <div class="foot-social-links">
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">CSR Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                  </div>
+                  <div class="foot-social-links foot-social-icons">
+                        <ul>
+                          <li>Stay in the Loop?</li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-facebook"></i></a></li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-x-twitter"></i></a></li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-instagram"></i></a></li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-youtube"></i></a></li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-linkedin"></i></a></li>
+                          <li><a href="#">
+                            <i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                  </div>
+              </div>
+        </div> 
+
+
+    <script src="Samsung.js"></script>
+
+</body>
+</html>
