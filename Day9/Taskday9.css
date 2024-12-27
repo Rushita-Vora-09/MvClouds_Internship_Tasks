@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.container {
+    border: 2px solid;
+    position: relative;
+    width: 1000px;
+    height: 700px;
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    cursor: grab;
+    /* border: 2px solid; */
+}
+#outerCircle {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#draggableCircle {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
